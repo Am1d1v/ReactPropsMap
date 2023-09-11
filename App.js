@@ -20,8 +20,9 @@ function App() {
   return (
     <div className="App">
       <Counter count={count} />
-      {textArr.map((text) => {
-        return <Button  onClick={incrementCount} text={text}/>
+      {textArr.map((text, index) => {
+        console.log(text, index)
+        return <Button  onClick={incrementCount} text={text} key={index}/>
       })}
     </div>
   );
